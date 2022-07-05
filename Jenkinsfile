@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            	bat 'mvn clean install -DskipTests'
+            	bat 'npm  run-script build'
             	
                 
             }
@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
             
-                bat ' mvn test'
+                bat ' mvn  run-script test'
             }
         }
 
