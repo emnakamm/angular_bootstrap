@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
             
-                bat ' mvn  run-script test'
+                bat ' npm  run-script test'
             }
         }
 
