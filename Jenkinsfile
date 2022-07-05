@@ -15,13 +15,13 @@ pipeline {
         stage('Test') {
             steps {
             
-                bat ' npm  run-script test'
+                bat ' npm  run test'
             }
         }
          stage('Deploy') {
         steps {
             
-                bat ' npm  run-script deploy'
+                bat ' npm  run deploy'
             }
         }
 
