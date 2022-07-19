@@ -38,9 +38,9 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    browserDisconnectTimeout: 60000,
-  browserDisconnectTolerance: 3,
-  browserNoActivityTimeout: 60000,
+   browserDisconnectTimeout: 60000,
+    browserDisconnectTolerance: 3,
+    browserNoActivityTimeout: 60000,
     singleRun: false,
     restartOnFileChange: true
   });
