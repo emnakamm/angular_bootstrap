@@ -27,7 +27,7 @@ pipeline {
         }
         stage('run docker image') {
             steps {
-            	bat 'docker run -d -p 4200:80 --name  angular_bootstrap front_nginx '
+            	bat 'docker run -d -p 4200:80 --name  front_nginx front_nginx '
             	
                 
             }
