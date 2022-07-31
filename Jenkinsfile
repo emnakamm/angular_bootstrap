@@ -20,7 +20,7 @@ pipeline {
         }
         stage('sonar'){
             steps {
-                  bat'sonar-scanner.bat -D"sonar.projectKey=sonar_angular" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=900048c42b37674a5f19062646b400808df1cf0d"'
+                  bat' -D"sonar.projectKey=sonar_angular" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=900048c42b37674a5f19062646b400808df1cf0d"'
             }
         }
           
