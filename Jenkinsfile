@@ -18,12 +18,7 @@ pipeline {
                 bat ' npm  run test'
             }
         }
-               stage('sonar') {
-            steps {
-            
-                bat '  mvn clean verify sonar:sonar'
-            }
-        }
+  
         stage('Build docker image') {
             steps {
             	bat 'docker build --tag front_nginx  . '
