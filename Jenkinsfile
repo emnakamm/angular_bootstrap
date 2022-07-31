@@ -18,6 +18,12 @@ pipeline {
                 bat ' npm  run test'
             }
         }
+        stage('sonar'){
+            steps {
+                  sonar-scanner.bat -D"sonar.projectKey=sonar_angular" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=900048c42b37674a5f19062646b400808df1cf0d"
+            }
+        }
+          
         stage('Build docker image') {
             steps {
             	bat 'docker build --tag front_nginx  . '
