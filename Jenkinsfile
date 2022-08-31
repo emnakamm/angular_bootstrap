@@ -18,6 +18,13 @@ pipeline {
                 bat ' npm  run test'
             }
         }
+        stage('sonar') {
+            steps {
+            
+                bat ' npm  run sonar'
+            }
+        }
+        
 
         stage('Build docker image') {
             steps {
