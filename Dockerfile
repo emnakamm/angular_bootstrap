@@ -7,5 +7,3 @@ RUN npm install
 COPY .  /angular_bootstrap/
 RUN npm run build 
 
-FROM  nginx:alpine
-COPY --from=build /angular_bootstrap /usr/share/nginx/html
