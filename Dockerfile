@@ -5,7 +5,7 @@ WORKDIR  /angular_bootstrap
 COPY package.json /angular_bootstrap/
 RUN npm install
 COPY .  /angular_bootstrap/
-RUN node_modules/.bin/ng build 
+RUN npm run build 
 
 FROM  nginx:alpine
 COPY --from=build /angular_bootstrap /usr/share/nginx/html
