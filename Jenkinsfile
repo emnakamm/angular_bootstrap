@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    environment{CI='false'}
     stages {
         stage('install'){
             steps { bat 'npm install'}
