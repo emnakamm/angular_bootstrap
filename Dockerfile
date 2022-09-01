@@ -5,5 +5,5 @@ WORKDIR  /angular_bootstrap
 COPY package.json /angular_bootstrap/
 RUN npm install
 COPY .  /angular_bootstrap/
-RUN npm run ng build 
+RUN npm run  build 
 
