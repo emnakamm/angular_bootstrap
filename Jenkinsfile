@@ -18,13 +18,6 @@ pipeline {
                 bat ' npm  run test'
             }
         }
-        stage('Build docker image') {
-            steps {
-            	bat 'docker build --tag front_nginx  . '
-            	
-                
-            }
-        }
         stage('sonar') {
             steps {
             
@@ -33,7 +26,13 @@ pipeline {
         }
         
 
-
+        stage('Build docker image') {
+            steps {
+            	bat 'docker build --tag front_nginx  . '
+            	
+                
+            }
+        }
         stage('run docker image') {
             steps {
             	bat 'docker run -d -p 4200:80 --name  angular front_nginx '
